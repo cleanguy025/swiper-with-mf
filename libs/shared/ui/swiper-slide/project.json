@@ -1,0 +1,27 @@
+{
+  "name": "shared-ui-swiper-slide",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/swiper-slide/src",
+  "prefix": "swiper-with-mf",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/swiper-slide"],
+      "options": {
+        "jestConfig": "libs/shared/ui/swiper-slide/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/swiper-slide/**/*.ts",
+          "libs/shared/ui/swiper-slide/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
